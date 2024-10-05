@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>is-cod.in - Subdomain Service</title>
+    <title>Subdomain Service - is-cod.in</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo glitch" data-text="is-cod.in">is-cod.in</div>
+        <div class="logo">is-cod.in</div>
+        <button class="toggle-menu">Menu</button>
         <nav>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="home" class="hero">
-        <h1>Create Your Subdomain Instantly</h1>
-        <p class="maintenance-message">🚧 This site is currently under maintenance. Please check back later! 🚧</p>
-        <form id="subdomain-form" style="display: none;"> <!-- Hide the form during maintenance -->
-            <input type="text" placeholder="Enter your subdomain" required>
-            <button type="submit">Create Subdomain</button>
-        </form>
+    <section class="hero">
+        <h1>Subdomain Service Under Maintenance</h1>
+        <div class="maintenance-message">Please check back later!</div>
+        <div id="subdomain-form">
+            <input type="text" placeholder="Enter your desired subdomain" />
+            <button>Submit</button>
+        </div>
     </section>
-
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We provide an easy and efficient way to create and manage your subdomains.</p>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
     <footer>
         <p>&copy; 2024 is-cod.in. All Rights Reserved.</p>
     </footer>
+    <script>
+        const toggleMenuButton = document.querySelector('.toggle-menu');
+        const navLinks = document.querySelector('.nav-links');
 
-    <script src="script.js"></script>
+        toggleMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
