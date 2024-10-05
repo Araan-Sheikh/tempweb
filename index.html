@@ -3,39 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subdomain Service - is-cod.in</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="is-cod.in - A free subdomain service">
+    <meta name="keywords" content="subdomain, free subdomain, is-cod.in">
+    <meta name="author" content="is-cod.in">
+    <title>is-cod.in - Free Subdomain Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Silkscreen', cursive; /* Updated font */
+            background-color: #1a1a1a;
+            color: #eaeaea;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+            padding: 20px; /* Add padding for smaller screens */
+        }
+
+        /* Light Theme */
+        .light-theme body, .light-theme html {
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* Container styling for spacing */
+        .container {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #00bcd4; /* Border to enhance the container */
+            border-radius: 10px; /* Rounded corners */
+            background: rgba(26, 26, 26, 0.9); /* Slightly transparent background */
+        }
+
+        /* Styled heading */
+        h1 {
+            font-size: 3.5rem; /* Increased size */
+            margin-bottom: 20px;
+            color: #00bcd4; /* Greenish cyan color */
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.7); /* Glow effect */
+        }
+
+        /* Glitch effect */
+        h1::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #00bcd4;
+            overflow: hidden;
+            animation: glitch 1.5s infinite linear alternate-reverse;
+            clip: rect(0, 900px, 0, 0);
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, -2px); }
+            40% { transform: translate(2px, 0); }
+            60% { transform: translate(0, 2px); }
+            80% { transform: translate(-2px, 0); }
+            100% { transform: translate(2px, -2px); }
+        }
+
+        /* Maintenance notice */
+        .maintenance {
+            font-size: 1.5rem; /* Increased size */
+            margin: 20px 0;
+            color: #ff5a5f; /* Red for maintenance alert */
+            font-weight: bold; /* Make it bold */
+        }
+
+        /* Button container to align buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Button styles */
+        .button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            background-color: #00bcd4; /* Greenish cyan */
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px; /* Slightly rounded corners */
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .button:hover {
+            background-color: #0097a7; /* Darker cyan */
+        }
+
+        /* Donation button style */
+        .donation-button {
+            background-color: #ff5a5f; /* Red */
+        }
+
+        .donation-button:hover {
+            background-color: #e63946; /* Darker red */
+        }
+
+        /* Footer styles */
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        footer a {
+            color: #00bcd4; /* Greenish cyan link */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">is-cod.in</div>
-        <button class="toggle-menu">Menu</button>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Subdomain Service Under Maintenance</h1>
-        <div class="maintenance-message">Please check back later!</div>
-        <div id="subdomain-form">
-            <input type="text" placeholder="Enter your desired subdomain" />
-            <button>Submit</button>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 is-cod.in. All Rights Reserved.</p>
-    </footer>
-    <script>
-        const toggleMenuButton = document.querySelector('.toggle-menu');
-        const navLinks = document.querySelector('.nav-links');
 
-        toggleMenuButton.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-    </script>
+    <div class="container">
+        <h1 data-text="is-cod.in">is-cod.in</h1>
+        <div class="maintenance">Site Under Maintenance</div>
+        <p>Get your own subdomain today!</p>
+    </div>
+
+    <!-- Footer with links -->
+    <footer>
+        Created by <a href="https://is-cod.in" target="_blank">is-cod.in</a> team
+    </footer>
+
 </body>
 </html>
